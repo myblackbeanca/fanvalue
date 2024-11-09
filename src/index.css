@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-lg border border-gray-200/50 shadow-xl shadow-gray-200/30;
+  }
+
+  .revenue-card {
+    @apply glass-card rounded-2xl p-6 transition-all duration-200 hover:scale-105;
+  }
+
+  .tab-button {
+    @apply px-4 py-2 rounded-xl text-sm font-medium transition-colors;
+  }
+
+  .tab-button-active {
+    @apply bg-indigo-600 text-white shadow-lg shadow-indigo-500/30;
+  }
+
+  .tab-button-inactive {
+    @apply bg-gray-100 text-gray-600 hover:bg-gray-200;
+  }
+
+  .form-input {
+    @apply mt-1 block w-full rounded-md border-gray-300 shadow-sm 
+    focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50
+    bg-white/50 backdrop-blur-sm;
+  }
+}
+
+body {
+  @apply bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen;
+}
